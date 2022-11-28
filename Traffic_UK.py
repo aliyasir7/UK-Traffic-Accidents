@@ -4,15 +4,12 @@ PROJE = "Traffic Accidents UK"
 """ 1- Importing Libraries and Packages """
 import numpy as np
 import pandas as pd
-import os
 import seaborn as sns
 from matplotlib import pyplot as plt
-import warnings
 import statistics as st
 
-# Packages settings and directory settings
+# Packages settings
 sns.set_style("whitegrid")
-warnings.filterwarnings("ignore")
 
 """ 2- Loading and Viewing Data Set """
 data_1 = pd.read_csv("accidents_2005_to_2007.csv", parse_dates = ["Date"])
@@ -69,7 +66,7 @@ data["Weather_Conditions"].fillna("Fine without high winds", inplace = True)
 data["Road_Surface_Conditions"].fillna("Dry", inplace = True)
 
 null_table(data)
-del copy,hour_min,mean_min, median_min,median_str,minute, unique_pedes
+del copy,hour_min,mean_min, median_min,median_str,minute
 
 """ 4- Featuring """
 #index
